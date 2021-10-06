@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+<main>
+    <div class="content-wrapper">
+        <div class="">
+            <div class="tabs">
+                <ul class="tabs__list">
+                    <li class="tabs__item">
+                        <button class="tabs__btn tabs__btn--active" data-tabs-path="main">Task 1</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__btn" data-tabs-path="solution_2">Task 2</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__btn" data-tabs-path="solution_3">Task 3</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__btn" data-tabs-path="solution_4">Task 4</button>
+                    </li>
+                </ul>
+                <div class="tabs__content tabs__content--active" data-tabs-target="main">
+                    <div class="content">
+                        <div class="home-task">
+                            <h1>Home task 1</h1>
+                            <p>1. Используя массив людей, нужно определить:
+                                средний возраст, максимальное количество языков, количество девушек и парней.
+                                Всю информацию выведите на экран.
+                                Массив сначала запишите LocalStorage, а потом достаньте из него.</p>
+                        </div>
+                        <section>
+                        </section>
+                        <section class="content-section">
+                            <div class="row">
+                                <div class="col">
+                                    <h3>List group of selected people:</h3>
+                                    <label for="sex_select">Choose from people:</label>
+                                    <select class="select" name="sex" id="sex_select">
+                                        <option value="">--Please choose an option--</option>
+                                        <option class="sex" value="Male">Male</option>
+                                        <option class="sex" value="Female">Female</option>
+                                        <option class="sex" value="FemaleVegan">FemaleVegan</option>
+                                        <option class="sex" value="MaleVegan">MaleVegan</option>
+                                    </select>
+                                    <div class="nest" id="all_info">
+
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <h2>People group analytics</h2>
+                                        <p>Middle age all group of people: <strong id="middle_age"></strong></p>
+                                        <p>Middle age Male: <strong id="middle_age_male"></strong></p>
+                                        <p>Middle age Female: <strong id="middle_age_female"></strong></p>
+                                        <p>Max number of lang's: <strong id="max_num_of_langs"></strong></p>
+                                        <p>Vagitarians from Male: <strong id="num_veg_from_male"></strong> Not
+                                            vagitarian from
+                                            Male:
+                                            <strong id="num_notveg_from_male"></strong></p>
+                                        <p>Vagitarians from Female: <strong id="num_veg_from_female"></strong>Not
+                                            vagitarian
+                                            from
+                                            Female: <strong id="num_notveg_from_female"></strong></p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3>List Male group selected by age:</h3>
+                                    <label for="age_select">Male age:</label>
+                                    <select class="select" name="age" id="age_select">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="age_additional">
+
+                                    </div>
+                                    <hr>
+                                    <h3>List Male group selected by lang:</h3>
+                                    <label for="lang_select">Langs:</label>
+                                    <select class="select" name="lang" id="lang_select">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="lang_additional">
+
+                                    </div>
+                                    <hr>
+                                    <h3>List Female group selected by age:</h3>
+                                    <label for="age_female_select">Female age:</label>
+                                    <select class="select" name="age" id="age_female_select">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="age_female_additional">
+
+                                    </div>
+                                    <hr>
+                                    <h3>List Female group selected by lang:</h3>
+                                    <label for="lang_female_select">Langs:</label>
+                                    <select class="select" name="lang_female" id="lang_female_select">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="lang_female_additional">
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="tabs__content" data-tabs-target="solution_2">
+                    <div class="content">
+                        <div class="home-task">
+                            <h1>Home task 2</h1>
+                            <p class="">2. Создать поле для ввода и кнопку. По нажатию на кнопку, должна
+                                проходить
+                                валидация(проверка поля на ошибки).
+                                Поле должно содержать название страны члена Евросоюза, начинаться с большой буквы,
+                                иметь
+                                минимальную длину символов - 4. Список стран есть в гугле.
+                                Если введенная страна не является членом Евросоюза - вывести сообщение об ошибке.
+                                Логика валидации должна быть описана в функции.
+                                * учтите все случаи, даже когда поле пустое
+                                * добавьте стилей</p>
+                        </div>
+                        <section>
+                            <div class="row">
+                                <div class="col">
+                                    <p><strong>To get code - enter in the field one of the EU country.</strong></p>
+                                    <p>The EU countries are: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus,
+                                        Czech
+                                        Republic,
+                                        Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy,
+                                        Latvia,
+                                        Lithuania,
+                                        Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia,
+                                        Spain and
+                                        Sweden.</p>
+                                </div>
+                                <div class="col">
+                                    <video style="margin: 0 auto; display: block;" id="EU" width="224" playsinline=""
+                                           autoplay="autoplay"
+                                           muted="muted" loop="loop">
+                                        <source type="video/mp4"
+                                                src="https://assets9.lottiefiles.com/render/kifqwfpu.mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="country-form">
+                            <div class="col">
+                                <p class="country_info"><span id="test"></span><span id="flag"></span><span
+                                        id="code"></span><span id="vat"></span></p>
+                                <form class="form">
+                                    <label for="check_country">Get country code</label>
+                                    <input class="input_lang" id="check_country" type="text" name="check_country">
+                                    <p class="small"><span id="small"></span><span id="length_check"
+                                                                                   style="color: #df8a64;"></span></p>
+                                    <button class="btn" id="button_check_country" type="button">Click</button>
+                                </form>
+                            </div>
+                        </section>
+                        <section class="hidden_content">
+                            <div class="row">
+                                <div class="col hidden" id="hidden">
+                                    <video id="europe_p " class="europe_p" playsinline="" autoplay="autoplay"
+                                           muted="muted" loop="loop">
+                                        <source type="video/mp4"
+                                                src="https://assets9.lottiefiles.com/render/ko05p13t.mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="tabs__content" data-tabs-target="solution_3">
+                    <div class="content">
+                        <div class="home-task">
+                            <h3>Домашнее Задание: </h3>
+                            <p>Аналогично заданию в теме: “Отправки Запросов”, создать страницу продуктов, которая будет
+                                подгружать продукты уже после загрузки страницы. </p>
+                            <p style="color: black; font-size: 12px">Продолжение реализации в табе Task 4</p>
+                        </div>
+                        <div id="input">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content" data-tabs-target="solution_4">
+                    <div class="content">
+                        <div class="home-task">
+                            <h3>Task 3</h3>
+                            <p>Выбор продукта по типу, названию, цене, id </p>
+                        </div>
+                        <section class="content-section">
+                            <br>
+                            <div class="row">
+                                <div>
+                                    <h3>List products by type</h3>
+                                    <label for="type"> type:</label>
+                                    <select class="select" name="type" id="type">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="info_product">
+
+                                    </div>
+                                    <hr>
+                                    <h3>List products by name:</h3>
+                                    <label for="product_name">name:</label>
+                                    <select class="select" name="product_name" id="product_name">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="info_product_name">
+
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div>
+                                    <h3>List products by price</h3>
+                                    <label for="price">price:</label>
+                                    <select class="select" name="price" id="price">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="info_price">
+
+                                    </div>
+                                    <hr>
+                                    <h3>List products by id</h3>
+                                    <label for="id_number"> id:</label>
+                                    <select class="select" name="id" id="id_number">
+                                        <option value="">--Please choose an option--</option>
+                                    </select>
+                                    <div class="nest" id="info_id_number">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="js/tabs.js"></script>
+<script src="js/list_source.js"></script>
+<script src="js/script.js"></script>
+<script src="js/products.js"></script>
+<script src="js/fastcatj.js"></script>
+<script src="js/country.js"></script>
+<script src="js/valid.js"></script>
+<script src="js/tabs.js"></script>
+</body>
+</html>
